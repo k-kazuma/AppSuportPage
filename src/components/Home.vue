@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
+  <div class="containar">
     <img
       class="icon"
       src="../assets/AppIcon.jpeg"
@@ -9,9 +9,15 @@
       width="100"
     />
     <div>
-      <a href="https://apps.apple.com/us/app/alarmscheduler/id6708228546">
-        ダウンロード
-      </a>
+      <h3>AlarmScheduler</h3>
+      <button>
+        <a
+          href="https://apps.apple.com/us/app/alarmscheduler/id6708228546"
+          target="_blank"
+        >
+          ダウンロード
+        </a>
+      </button>
     </div>
   </div>
   <div>
@@ -21,16 +27,20 @@
     </p>
   </div>
   <div>
-    <Link href="/inquiry"> 問合せフォーム </Link>
-    <Link href="mailto:alarm.scheduler@gmail.com"> メールで問合せ </Link>
+    <a href="/inquiry"> 問合せフォーム </a>
+    <a href="mailto:alarm.scheduler@gmail.com"> メールで問合せ </a>
     <p>
       ※お問い合わせいただいた内容への返信は行っておりません。お送りいただいた内容をもとに今後のサービス改善へ努めます。
     </p>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .icon {
   border-radius: 30px;
+}
+.containar {
+  display: flex;
+  justify-content: center;
 }
 </style>
