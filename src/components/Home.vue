@@ -2,12 +2,14 @@
 
 <template>
   <div class="containar">
-    <img
-      class="icon"
-      src="../assets/AppIcon.jpeg"
-      alt="アプリアイコン"
-      width="100"
-    />
+    <div>
+      <img
+        class="icon"
+        src="../assets/AppIcon.jpeg"
+        alt="アプリアイコン"
+        width="150"
+      />
+    </div>
     <div>
       <h3>AlarmScheduler</h3>
       <button>
@@ -26,9 +28,13 @@
       繰り返し設定中アラームのスキップ機能や、カレンダーUIでのアラーム設置が可能です。
     </p>
   </div>
-  <div>
-    <a href="/inquiry"> 問合せフォーム </a>
-    <a href="mailto:alarm.scheduler@gmail.com"> メールで問合せ </a>
+  <div class="inquiry">
+    <button>
+      <a href="/inquiry"> 問合せフォーム </a>
+    </button>
+    <button>
+      <a href="mailto:alarm.scheduler@gmail.com"> メールで問合せ </a>
+    </button>
     <p>
       ※お問い合わせいただいた内容への返信は行っておりません。お送りいただいた内容をもとに今後のサービス改善へ努めます。
     </p>
@@ -36,11 +42,22 @@
 </template>
 
 <style lang="scss">
+.inquiry {
+  button {
+    margin: 0 10px;
+    background-color: rgb(85, 83, 83);
+  }
+}
 .icon {
   border-radius: 30px;
 }
 .containar {
+  margin-top: 55px;
   display: flex;
   justify-content: center;
+
+  div {
+    margin: 0 70px;
+  }
 }
 </style>

@@ -2,10 +2,7 @@
 import { ref } from "vue";
 import HeaderMenuButton from "./HeaderMenuButton.vue";
 
-interface menu {
-  title: string;
-  path: string;
-}
+import type { menu } from "@/type";
 
 const buttonIsActive = ref<boolean>(false);
 const menuAction = () => {
