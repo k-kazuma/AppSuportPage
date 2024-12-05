@@ -18,7 +18,7 @@ defineProps<{
   </div>
 </template>
 
-<style>
+<style lang="scss">
 .btn-trigger {
   position: absolute;
   top: 15px;

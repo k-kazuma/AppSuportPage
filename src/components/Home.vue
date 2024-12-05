@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Inquiry from "./Inquiry/Inquiry.vue";
+</script>
 
 <template>
   <div class="containar">
@@ -22,26 +24,14 @@
       </button>
     </div>
   </div>
-  <div>
-    <p>アラームの日時管理に特化した軽量アラームアプリです。</p>
-    <p>
-      繰り返し設定中アラームのスキップ機能や、カレンダーUIでのアラーム設置が可能です。
-    </p>
-  </div>
-  <div class="inquiry">
-    <button>
-      <a href="/inquiry"> 問合せフォーム </a>
-    </button>
-    <button>
-      <a href="mailto:alarm.scheduler@gmail.com"> メールで問合せ </a>
-    </button>
-    <p>
-      ※お問い合わせいただいた内容への返信は行っておりません。お送りいただいた内容をもとに今後のサービス改善へ努めます。
-    </p>
-  </div>
+  <hr />
+  <Inquiry />
 </template>
 
 <style lang="scss">
+hr {
+  margin: 45px;
+}
 .inquiry {
   button {
     margin: 0 10px;
