@@ -15,22 +15,30 @@ defineProps<{ menuList: menu[]; active: boolean }>();
 </template>
 
 <style lang="scss">
-.header-menu {
-  position: fixed;
-  top: 125px;
-  left: 50px;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba($color: #e1dada, $alpha: 0);
-  transition: all 0.5s;
-  z-index: -1;
-  &.active {
-    display: block;
+@keyframes menu {
+  0% {
+    top: 125px;
+    left: 50px;
+  }
+  100% {
     background-color: rgba($color: #e1dada, $alpha: 0.83);
     top: 75px;
     left: 0;
-    z-index: 1;
-
+  }
+}
+.header-menu {
+  // display: none;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($color: #e1dada, $alpha: 0);
+  // transition: all 0.5s;
+  &.active {
+    animation-name: menu;
+    animation-duration: 0.67s;
+    animation-fill-mode: forwards;
     ul > li {
       opacity: 1;
     }

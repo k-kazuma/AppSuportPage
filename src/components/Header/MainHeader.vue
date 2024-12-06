@@ -31,13 +31,6 @@ const menuList: menu[] = [
       <HeaderMenuButton :action="menuAction" :active="buttonIsActive" />
     </div>
     <HeaderMenuList :menuList="menuList" :active="buttonIsActive" />
-    <div class="header-menu" :class="buttonIsActive ? `active` : ``">
-      <ul>
-        <li v-for="menu in menuList" v-bind:key="menu.title">
-          <a :href="menu.path">{{ menu.title }}</a>
-        </li>
-      </ul>
-    </div>
   </div>
 </template>
 
